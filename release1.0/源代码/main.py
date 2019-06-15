@@ -107,7 +107,7 @@ class MainWin(QtWidgets.QWidget, ui.Ui_Form):
             elif li[i] == li[ori]:
                 li[ori] *= 2
                 li[i] = 0
-                #还要顺便加一下分
+                # 还要顺便加一下分
                 self.score += li[ori]
                 self.score_label.setText(str(self.score))
             ori = i
@@ -120,7 +120,7 @@ class MainWin(QtWidgets.QWidget, ui.Ui_Form):
 
         return li
 
-    def add_two(self): #  加两个格
+    def add_one(self):  # 加一个格
         add_able = []
         for i in range(4):
             for j in range(4):
@@ -166,9 +166,9 @@ class MainWin(QtWidgets.QWidget, ui.Ui_Form):
                 self.block_num[l][i] = reli[l]
             li = []
         if ori_block_num != self.block_num:  # 非无效操作下
-            # 加两个格
-            self.add_two()
-            #判断是不是over了
+            # 加个格
+            self.add_one()
+            # 判断是不是over了
             self.isover()
 
     def contralDown(self):
@@ -187,8 +187,8 @@ class MainWin(QtWidgets.QWidget, ui.Ui_Form):
                 self.block_num[l][i] = reli[l]
             li = []
         if ori_block_num != self.block_num:  # 非无效操作下
-            # 加两个格
-            self.add_two()
+            # 加个格
+            self.add_one()
             # 判断是不是over了
             self.isover()
 
@@ -207,8 +207,8 @@ class MainWin(QtWidgets.QWidget, ui.Ui_Form):
                 self.block_num[i][l] = reli[l]
             li = []
         if ori_block_num != self.block_num:  # 非无效操作下
-            # 加两个格
-            self.add_two()
+            # 加个格
+            self.add_one()
             # 判断是不是over了
             self.isover()
 
@@ -228,8 +228,8 @@ class MainWin(QtWidgets.QWidget, ui.Ui_Form):
                 self.block_num[i][l] = reli[l]
             li = []
         if ori_block_num != self.block_num:  # 非无效操作下
-            # 加两个格
-            self.add_two()
+            # 加个格
+            self.add_one()
             # 判断是不是over了
             self.isover()
 
